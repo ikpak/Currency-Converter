@@ -1,9 +1,13 @@
 // 1. define amount
-let amount = prompt("Enter the amount")
+let amount = Number(prompt("Enter the amount"))
+
+while (amount !== parseInt(amount).toString()) {
+    alert("Please enter a number");
+    amount = prompt("Enter the amount")
+}
 
 // 2. define From currency
 let from = prompt("Choose your currency").toUpperCase()
-
 
 // 3. define To currency
 let to = prompt("Choose the currency you want to convert your amount to").toUpperCase()
